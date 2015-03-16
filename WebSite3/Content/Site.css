@@ -1,0 +1,363 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 0px;
+    padding-right: 0px;
+    
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+    .body-content {
+        padding: 0;
+    }
+}
+
+nav
+{
+    position: fixed;    
+    left:20px;
+    top: 160px;    
+    width : 230px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    height: 400px;
+    background-color: white;
+}
+
+#content
+{
+    position: inherit;
+    float: right;
+    margin-left: 140px;
+    margin-top: 100px;
+    top: 70px;
+    min-width: 600px;
+    width: 80%;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+    height: auto;
+    min-height: 500px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;    
+    background-color: beige;
+}
+
+#upload_content
+{
+    position: absolute;
+    left: 280px;
+    top: 160px;
+    width: 75%;
+    min-width: 65%;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+    height: 700px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;    
+    background-color: beige;
+}
+
+#map_content
+{
+    position: absolute;  
+   top: 20px;
+    right: 5px;
+    min-width: 300px;
+    width: 60%;
+    height: 500px;
+    min-height: 400px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;    
+}
+
+#lng_lat
+{
+    position: absolute;  
+    top: 540px;
+    right: 5px;
+    width: auto;
+    height: auto;
+    -webkit-border-radius: 8px;
+    border: dashed solid black;
+    border-radius: 2px;   
+}
+
+#defaultPage_div
+{
+    position: inherit;
+    top: 70px;
+    width: 100%;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    padding-left: 20px;
+    padding-top: 10px;
+    height:650px;
+    min-height: 600px;  
+    background-size: cover;
+    background-image: url('../Images/Background.jpg');
+    background-repeat: no-repeat;
+}
+
+#about_contact_div
+{
+    position: inherit;
+    top: 70px;
+    width: 100%;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    padding-left: 20px;
+    padding-top: 10px;
+    height:800px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;   
+   /*background-size: cover;
+    background-image: url('../Images/Background.jpg');
+    background-repeat: no-repeat;*/ 
+}
+
+.heading_bar
+{
+    top:0px;
+    width: 100%;
+    background-color: mediumpurple;
+}
+
+.login input[type=button] 
+{
+	border-radius: 3px;	
+	background: linear-gradient(red,black);
+	color:white;
+	-webkit-border-radius: 3px;
+	width: 30%;
+	height: 30px;
+	margin-left: 5px;		
+}
+
+#img
+{
+    height: 400px;
+    width:45%;
+    margin: 5px auto;
+    position: absolute;
+    background-color: black;    
+}
+
+#extra-text
+{
+  
+}
+
+#div_extra
+{
+    height: 300px;
+    width: 45%;
+    position: absolute;
+    top: 350px;
+    left: 400px;
+    font-size: x-large;
+    font-weight: bold;
+    font-style: italic;
+    color: white;  
+}
+
+#contact_extra
+{
+    height: 600px;
+    width: 520px;
+    position: absolute;
+    top: 100px;
+    right: 200px; 
+    padding-left: 20px;
+    padding-top: 20px;
+    background-color: #00FA9A;
+}
+
+#contact_btn
+{
+    margin-left: 300px;
+    position:inherit;
+    float: right;
+}
+
+.nav_buttons
+{     
+    padding: 5px;   
+    border: 1px solid #DDDDDD;
+    width: 200px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: auto;    
+    /*Applying CSS3 gradient*/
+    background-color: green;
+    color: white;
+}
+
+.list-group-item:first-child 
+{
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+a.list-group-item 
+{
+color: white;
+}
+
+.list-group-item 
+{
+position: relative;
+display: block;
+padding: 10px 15px;
+margin-bottom: -1px;
+background-color: green;
+border: 1px solid #ddd;
+}
+
+#div2
+{
+ 
+}
+
+.list-group 
+{
+padding-left: 0;
+margin-bottom: 20px;
+}
+
+a.list-group-item:hover
+{
+    background-color: #2db34a;
+}
+
+#recoverydiv
+{
+    width: 50%;
+    margin-top: 100px;
+    margin-left: 100px;
+    height: auto;
+    border: 2px dotted black;
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+nav ul
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+nav ul li a:hover
+{
+    color: black;    
+}
+
+nav ul li:hover ul
+{
+    float: inherit;
+    display: block;
+}
+
+nav ul ul
+{
+    display: none;
+    position: relative;
+}
+
+#info_div
+{
+    
+    position:inherit;
+    float: left;    
+    height: auto;
+    width: 100%;
+    min-width: 30%;
+    background-color: lightgreen;
+
+}
+
+#live_feed
+{
+    margin-top: 10px;
+    position:inherit;
+    float: left;    
+    height: auto;
+    width: 100%;
+    min-width: 30%;
+    background-color: lightgreen;
+
+}
+
+#content .ImageGallery
+{
+    float:left;
+    height :auto;
+    min-width: 150px;
+    width:100%;
+    display: inline;    
+    margin-top: 20px;
+    background-color: peachpuff;
+    -webkit-transition:all 0.5s;
+-moz-transition:all 0.5s;
+-ms-transition:all 0.5s;
+-o-transition:all 0.5s;
+}
+
+#droplist{
+    border-radius: 2px;
+    min-width: 200px;
+
+}
+
+#droplist:hover
+{
+    border:3px solid blue;
+}
+
+.ImageGallery #Image_Display
+{
+    height:100px;
+    width:  200px;
+    margin-bottom: 10px;
+    
+}
+
+#Image_Display:hover
+{
+    height: 150px;
+    width: 300px;
+}
+
+#carousel
+{
+    position: absolute;
+    left: 5px;
+    top: 150px;
+    width: 600px;
+    min-width: 65%;
+    height: auto;    
+    background-color: red;
+}
