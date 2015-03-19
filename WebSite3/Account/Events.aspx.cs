@@ -38,6 +38,8 @@ public partial class Account_Events : System.Web.UI.Page
         string end_day = End_Day.Text;
         string end_month = End_Month.Text;
         string end_year = End_Year.Text;
+        string Longitude = longitude.Text;
+        string Latitude = latitude.Text;
         DateTime Start_Date = new DateTime();
         DateTime End_Date = new DateTime();
         param = false;
@@ -95,7 +97,7 @@ public partial class Account_Events : System.Web.UI.Page
 
 
             //put back userId
-            cmd = new SqlCommand("INSERT INTO Events_Table(Event_Id,Event_Name, Location, Start_Date,End_Date, Information, UserId,Image_Id) VALUES (@Event_Id,@Event_Name, @Location, @Start_Date,@End_Date, @Information, @UserId,@Image_Id);", conn);
+            cmd = new SqlCommand("INSERT INTO Events_Table(Event_Id,Event_Name, Location, Start_Date,End_Date, Information, UserId,Image_Id,Latitude,Longitude) VALUES (@Event_Id,@Event_Name, @Location, @Start_Date,@End_Date, @Information, @UserId,@Image_Id,@Latitude,@Longitude);", conn);
 
             //Student Permits
             cmd.Parameters.Add("@Event_Id", eventID.ToString());
@@ -106,6 +108,8 @@ public partial class Account_Events : System.Web.UI.Page
             cmd.Parameters.Add("@Information", Information.ToString());
             cmd.Parameters.Add("@UserId", Context.User.Identity.GetUserName().ToString());
             cmd.Parameters.Add("@Image_Id", imageID.ToString());
+            cmd.Parameters.Add("@Latitude", Latitude.ToString());
+            cmd.Parameters.Add("@Longitude", Longitude.ToString());
 
             //Uploads to Database
             cmd.Connection = conn;

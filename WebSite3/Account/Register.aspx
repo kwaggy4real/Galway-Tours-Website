@@ -1,13 +1,13 @@
 ﻿<%@ Page Title="Register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Register.aspx.cs" Inherits="Account_Register" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-   
+   <link rel="stylesheet" href="~/Content/Site.css" type="text/css"/> 
 
           
     <p class="text-danger">
         <asp:Literal runat="server" ID="ErrorMessage" />
     </p>
-    <div id="login_div">
+    <div id="register_div">
         <fieldset>
             <legend><em>Sign Up for Your New Account</em></legend>
          <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" CssClass="form-control-static" ContinueDestinationPageUrl="~/Account/Welcome_Page.aspx" OnCreatedUser="CreateUserWizard1_CreatedUser" >

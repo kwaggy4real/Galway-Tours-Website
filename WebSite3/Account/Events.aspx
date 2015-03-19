@@ -157,7 +157,6 @@
        <div class ="list-group">
         <a href="Welcome_Page.aspx" class="list-group-item">Home</a>
         <a href="Details.aspx" class="list-group-item">Upload Business/Hostels,etc.</a>
-        <a href="Edit_Details.aspx" class="list-group-item">Edit Business/Hostels,etc.</a>
         <ul>  
              <li>
               <a href=# class="list-group-item">View Uploaded: </a>   
@@ -189,10 +188,12 @@
         <input id="pac-input"  type="text" placeholder="Search Box">
         <div id="map_content" >
              
-        </div>
+        </div> 
         <div id="lng_lat" >
+           
            <asp:TextBox ID="longitude" runat="server" placeholder="longitude" Visible="true" />
-        <asp:TextBox ID="latitude"  CssClass="btn btn-default" runat="server" placeholder="latitude" Visible="true"/>
+        <asp:TextBox ID="latitude"  runat="server" placeholder="latitude" Visible="true"/>
+          
         </div>
        </div>
 

@@ -24,8 +24,11 @@ public partial class Account_Details : Page
                     string category = drop1.Text;
                     string email = emailbox1.Text;
                     SqlCommand cmd;
-                    string imageID = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
-        
+                    string imageID = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0,8);
+                    string Longitude = longitude.Text;
+                    string Latitude = latitude.Text;
+                    string ratings_id = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 5) + "-" + Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 5) + "-" + Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 5);
+
                     try
                     {
                         
@@ -33,7 +36,7 @@ public partial class Account_Details : Page
 
                         
                         //put back userId
-                        cmd = new SqlCommand("INSERT INTO Details(IDNumber, UserId,Comp_Name, Address, Website,Information, Rating, Telephone_Number,Category,Email,Image_ID) VALUES (@IDNumber,@UserId,@Comp_Name, @Address, @Website,@Information, @Rating, @Telephone_Number,@Category,@Email,@Image_ID);", conn);
+                        cmd = new SqlCommand("INSERT INTO Details(IDNumber, UserId,Comp_Name, Address, Website,Information, Telephone_Number,Category,Email,Image_ID,Latitude,Longitude,Ratings_ID) VALUES (@IDNumber,@UserId,@Comp_Name, @Address, @Website,@Information, @Telephone_Number,@Category,@Email,@Image_ID,@Latitude,@Longitude,@Ratings_ID);", conn);
 
                         //Student Permits
                         cmd.Parameters.Add("@IDNumber", idnumber);
@@ -45,8 +48,10 @@ public partial class Account_Details : Page
                         cmd.Parameters.Add("@Telephone_Number", tel_num);
                         cmd.Parameters.Add("@Category", category.ToString());
                         cmd.Parameters.Add("@Email", email);
-                        cmd.Parameters.Add("@Rating","");
                         cmd.Parameters.Add("@Image_ID", imageID);
+                        cmd.Parameters.Add("@Latitude", Latitude);
+                        cmd.Parameters.Add("@Longitude", Longitude);
+                        cmd.Parameters.Add("@Ratings_ID", ratings_id);
 
 
                         //Uploads to Database

@@ -22,6 +22,8 @@ public partial class Account_Edit_Details : System.Web.UI.Page
         string tel_num1 = "";
         string category = "";
         string email1 = "";
+        string Lat = "";
+        string Lng = "";
         SqlCommand cmd;
 
         if (!IsPostBack)
@@ -54,6 +56,11 @@ public partial class Account_Edit_Details : System.Web.UI.Page
                     //tel_num = System.Int32.Parse(tel);
                     
                     email1 = (String)rdr["Email"];
+
+                    Lat = (String)rdr["Latitude"];
+                    Lng = (String)rdr["Longitude"];
+
+                    
                 }
                 conn.Close();
 
@@ -63,16 +70,19 @@ public partial class Account_Edit_Details : System.Web.UI.Page
                 Console.WriteLine(es.Message);
             }
 
-            populateFields( address1, WebAddress1, information1, tel_num1, email1);
+            populateFields( address1, WebAddress1, information1, tel_num1, email1, Lat, Lng);
         }
     }
-    protected void populateFields(string addr, string web, string info, string telnum, string email)
+    protected void populateFields(string addr, string web, string info, string telnum, string email, string lat, string lng)
     {
         Address.Text = addr;
         webAddress.Text = web;
         Information.Text = info;
         Telephone_Number.Text = telnum;
         emailbox1.Text = email;
+        latitude.Text = lat;
+        longitude.Text = lng;
+        
 
     }
     protected void Update(object sender, EventArgs e)
@@ -83,7 +93,10 @@ public partial class Account_Edit_Details : System.Web.UI.Page
         string info = Information.Text;
         string tel_num = Telephone_Number.Text;
         string email = emailbox1.Text;
+        string lat = latitude.Text;
+        string lng1 = longitude.Text;
         SqlCommand cmd;
+
 
         try
         {
@@ -91,8 +104,8 @@ public partial class Account_Edit_Details : System.Web.UI.Page
             SqlConnection conn = new SqlConnection("Data Source=LUGH3.it.nuigalway.ie;Initial Catalog=msdb1343;User ID=msdb1343;Password=msdb1343DA");
             
             //put back userId
-          
-            string updateString = @"UPDATE Details SET Address ='" + addr.ToString() + "',Website ='" + web.ToString() + "',Information ='" + info.ToString() + "',Telephone_Number ='" + tel_num.ToString() + "',Email ='" + email.ToString() + "' WHERE UserId='" + Context.User.Identity.GetUserName() + "' and Comp_Name ='" + Session["Name"] + "'";
+
+            string updateString = @"UPDATE Details SET Address ='" + addr.ToString() + "',Website ='" + web.ToString() + "',Information ='" + info.ToString() + "',Telephone_Number ='" + tel_num.ToString() + "',Email ='" + email.ToString() + "',Latitude ='" + lat.ToString() + "',Longitude ='" + lng1.ToString() + "'WHERE UserId='" + Context.User.Identity.GetUserName() + "' and Comp_Name ='" + Session["Name"] + "'";
           
             //Uploads to Database
             cmd = new SqlCommand(updateString);

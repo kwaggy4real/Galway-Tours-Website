@@ -44,13 +44,13 @@
                   <br /></td>
             </tr>
             <tr>
-                <td> <label>Name:</label><%= getHotelName().ToString() %><br /></td>
+                <td> <label>Name:</label><%= getHotelName().ToString() %> <br /></td>
             </tr>
              <tr>
                 <td> <label> Address:</label> <%= getAddress().ToString() %><br /></td>
             </tr>
             <tr>
-                <td> <label> Website:</label> <%= getWebAddress().ToString() %><br /></td>
+                <td> <label> Website:</label> <%= getWebAddress().ToString() %> <br /></td>
             </tr>
             <tr>
                 <td> <label> Information:</label> <%= getInformation().ToString() %><br /></td>

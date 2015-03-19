@@ -60,16 +60,22 @@
 		<div class="col-md-12 column">
 			<div class="carousel slide" id="carousel-528655">
 				<ol class="carousel-indicators">
-					<li data-slide-to="0" data-target="#carousel-528655">
+					<li data-slide-to="0" data-target="#carousel-528655" class="active">
 					</li>
 					<li data-slide-to="1" data-target="#carousel-528655">
 					</li>
-					<li data-slide-to="2" data-target="#carousel-528655" class="active">
+					<li data-slide-to="2" data-target="#carousel-528655" >
+					</li>
+                    <li data-slide-to="3" data-target="#carousel-528655">
+					</li>
+					<li data-slide-to="4" data-target="#carousel-528655">
+					</li>
+					<li data-slide-to="5" data-target="#carousel-528655" >
 					</li>
 				</ol>
 				<div class="carousel-inner">
 					<div class="item">
-						<img alt="" src="Images/Background.jpg">
+						<img  src="/Images/Background.jpg" style="height: 600px; width: 100%;">
 						<div class="carousel-caption">
 							<h4>
 								First Thumbnail label
@@ -78,9 +84,42 @@
 								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
 							</p>
 						</div>
-					</div>
+					</div>                   
 					<div class="item">
-						<img alt="" src="http://lorempixel.com/1600/500/sports/2">
+						<img alt="" style="height: 600px; width: 100%;" src="/Images/cathedral.jpg">
+						<div class="carousel-caption">
+							<h4>
+								Second Thumbnail label
+							</h4>
+							<p>
+								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+							</p>
+						</div>
+					</div>
+                    	<div class="item">
+						<img alt="" style="height: 600px; width: 100%;" src="/Images/cliffs of moher.jpg">
+						<div class="carousel-caption">
+							<h4>
+								Second Thumbnail label
+							</h4>
+							<p>
+								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+							</p>
+						</div>
+					</div>
+                    	<div class="item">
+						<img alt="" style="height: 600px; width: 100%;" src="/Images/eyre square.jpg">
+						<div class="carousel-caption">
+							<h4>
+								Second Thumbnail label
+							</h4>
+							<p>
+								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+							</p>
+						</div>
+					</div>
+                    	<div class="item">
+						<img alt="" style="height: 600px; width: 100%;" src="/Images/the docks.jpg">
 						<div class="carousel-caption">
 							<h4>
 								Second Thumbnail label
@@ -91,7 +130,7 @@
 						</div>
 					</div>
 					<div class="item active">
-						<img alt="" src="http://lorempixel.com/1600/500/sports/3">
+						<img alt="" style="height: 600px; width: 100%;" src="/Images/nui galway.jpg">
 						<div class="carousel-caption">
 							<h4>
 								Third Thumbnail label

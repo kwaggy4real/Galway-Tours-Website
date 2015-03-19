@@ -71,9 +71,8 @@
                          </table>  
                  </fieldset>                               
                     <div id="contact_btn">
-                             <asp:Button OnClick="sendEmail" Text="Send" runat="server"  CssClass="btn btn-default" />
+                             <asp:Button OnClick="sendEmail" Text="   Send   " runat="server"  CssClass="btn btn-default" />
                    </div>
-                             
 
          </div>
          </div>
